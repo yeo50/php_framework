@@ -1,0 +1,16 @@
+{
+    "name": "minhtet/phpmvc",
+    "authors": [
+        {
+            "name": "Minhtet",
+            "email": "minhtet3294@gmail.com"
+    }
+    ],
+    "autoload" : {
+        "psr-4": {
+            "app\\":"./"
+        }
+
+    },
+    "require": {}
+}
