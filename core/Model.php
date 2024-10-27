@@ -14,7 +14,7 @@ abstract class Model
     {
         foreach ($data as $key => $value) {
             if (property_exists($this, $key)) {
-                $this->{$key} = $value;
+                $this->{$key} = trim($value);
             }
         }
     }
@@ -32,8 +32,10 @@ abstract class Model
 
     public function validate()
     {
+
         foreach ($this->rules() as $attribute => $rules) {
             $value = $this->{$attribute};
+
             foreach ($rules as $rule) {
                 $ruleName = $rule;
                 if (!is_string($ruleName)) {
